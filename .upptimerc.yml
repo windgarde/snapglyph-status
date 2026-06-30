@@ -51,6 +51,8 @@ status-website:
     .submit-button { background: #f97316 !important; border-color: #ea580c !important; }
     a.error-button { background: #f97316 !important; border-color: #ea580c !important; }
     a { text-decoration-color: #f97316; }
+    /* hide footer ("open source, powered by Upptime") incl. the public-repo link */
+    footer { display: none !important; }
   # Force the browser-tab favicon to SnapGlyph's (the SVG <link> is otherwise hardcoded upstream).
   js: |
     (function () {
