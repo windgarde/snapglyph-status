@@ -30,6 +30,8 @@ status-website:
   navbar:
     - title: Status
       href: /
+    - title: SLA
+      href: https://snapglyph.com/sla
     - title: Website
       href: https://snapglyph.com
   # Off-white base + orange accent. Operational green / down red / degraded amber left intact.
