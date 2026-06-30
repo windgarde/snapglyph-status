@@ -21,9 +21,43 @@ status-website:
   cname: status.snapglyph.com
   name: SnapGlyph Status
   introTitle: "SnapGlyph Status"
-  introMessage: Live and historical uptime for SnapGlyph services. Powered by [Upptime](https://upptime.js.org) — no third-party service, just GitHub Actions, Issues, and Pages.
+  introMessage: Live and historical availability for SnapGlyph services.
+  logoUrl: https://status.snapglyph.com/logo.svg
+  favicon: https://status.snapglyph.com/favicon.svg
+  # Response-time chart colours -> SnapGlyph orange (default was teal #1abc9c / #89e0cf)
+  graphBorderColor: "#f97316"
+  graphBackgroundColor: "#fcd9b6"
   navbar:
     - title: Status
       href: /
-    - title: GitHub
-      href: https://github.com/$OWNER/$REPO
+    - title: Website
+      href: https://snapglyph.com
+  # Off-white base + orange accent. Operational green / down red / degraded amber left intact.
+  css: |
+    :root {
+      --body-background-color: #fafaf9 !important;
+      --body-text-color: #1c1917 !important;
+      --card-background-color: #ffffff !important;
+      --nav-background-color: #ffffff !important;
+      --nav-border-bottom-color: #ece7e3 !important;
+      --card-border-color: #ece7e3 !important;
+      --nav-current-border-bottom-color: #f97316 !important;
+      --error-button-border-color: #ea580c !important;
+      --error-button-background-color: #f97316 !important;
+      --submit-button-border-color: #ea580c !important;
+      --submit-button-background-color: #f97316 !important;
+    }
+    /* hardcoded teal/blue fallbacks in global.css */
+    .submit-button { background: #f97316 !important; border-color: #ea580c !important; }
+    a.error-button { background: #f97316 !important; border-color: #ea580c !important; }
+    a { text-decoration-color: #f97316; }
+  # Force the browser-tab favicon to SnapGlyph's (the SVG <link> is otherwise hardcoded upstream).
+  js: |
+    (function () {
+      document.querySelectorAll("link[rel~='icon']").forEach(function (l) { l.parentNode.removeChild(l); });
+      var i = document.createElement("link");
+      i.rel = "icon";
+      i.type = "image/svg+xml";
+      i.href = "/favicon.svg";
+      document.head.appendChild(i);
+    })();
