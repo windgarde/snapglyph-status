@@ -19,7 +19,7 @@ sites:
 
 status-website:
   cname: status.snapglyph.com
-  name: SnapGlyph Status
+  name: Status
   introTitle: "SnapGlyph Status"
   introMessage: Live and historical availability for SnapGlyph services.
   logoUrl: https://status.snapglyph.com/logo.svg
