@@ -4,7 +4,7 @@ repo: snapglyph-status
 sites:
   - name: SnapGlyph App
     url: https://app.snapglyph.com
-  - name: API & Database
+  - name: API
     url: https://app.snapglyph.com/api/health
     expectedStatusCodes:
       - 200
@@ -14,8 +14,6 @@ sites:
     url: https://glph.link/IZHM3XSG
     # SLA-critical redirect hop. Permanent canary link -> https://snapglyph.com
     # A 3xx that resolves to the destination counts as up.
-  - name: Marketing Site
-    url: https://snapglyph.com
 
 status-website:
   cname: status.snapglyph.com
