@@ -41,19 +41,16 @@
     "icon": "https://icons.duckduckgo.com/ip3/glph.link.ico",
     "slug": "short-link-redirects",
     "status": "up",
-    "uptime": "99.34%",
-    "uptimeDay": "94.69%",
-    "uptimeWeek": "99.24%",
-    "uptimeMonth": "99.34%",
-    "uptimeYear": "99.34%",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
     "time": 462,
     "timeDay": 414,
     "timeWeek": 424,
     "timeMonth": 462,
     "timeYear": 462,
-    "dailyMinutesDown": {
-      "2026-07-08": 71,
-      "2026-07-07": 5
-    }
+    "dailyMinutesDown": {}
   }
 ]
